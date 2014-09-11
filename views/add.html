@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nor1 Extract System</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add New Data Provider</h1>
+        <div class='funcTab'><button type="button" class="btnList">List Providers</button></div>
+
+        <div class='form'>
+            <form name="addProvdier" id="addProvdier" method="POST">
+
+            <h2>Basic Setting</h2>
+            <hr/>
+            Application Name:
+            <select name="application" class="appName">
+                <option value="default" selected="selected">Choose Application</option>
+                <option value="eStandby">eStandby</option>
+                <option value="eReach">eReach</option>
+            </select><br/>
+            Provider Name: <input type="text" name="providerName" class="providerName"></br>
+            Provider ID: <input type="text" name="providerID" class="providerID"><br/>
+            <br/>
+            <br/>
+
+            <h2>Fields List</h2>
+            <hr/>
+            <table id="extraFields">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                </tbody>
+            </table><br/><br/>
+            <button type="button" class="btnAdd">Add Field</button>
+            <br/><br/>
+            <button type="button" class="btnSubmit">Submit</button>
+            <button type="reset" class="btnReset">Reset</button>
+            </form>
+        </div>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/add.js"></script>
+    </div>
+</body>
+
+</html>

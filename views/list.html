@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nor1 Extract System</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Data Provider List</h1>
+
+        <!-- <div class='appTab'><span class="appName">eReach</span><span class="appName">eStandby</span></div> -->
+        <div class='funcTab'>
+            <button type="button" class="btnAddNew">Add new provider</button>
+            <button type="button" class="btnDelete">Delete provider</button>
+        </div>
+
+        <div class='providerTab'></div>
+        <div class='form'>
+            <form name="addProvdier" id="addProvdier" method="POST" action="">
+            <h2>Basic Setting</h2>
+            <hr/>
+            Please Choose Application:
+            <select name="appName" class="appName">
+                <option value="default" selected="selected">Choose Application</option>
+                <option value="eStandby">eStandby</option>
+                <option value="eReach">eReach</option>
+            </select><br/>
+            Choose Provider:
+            <select name="providerSelect" class="providerSelect">
+                <option value="default" selected="selected">Choose Provider</option>
+            </select><br/>
+            Provider Name: <input type="text" name="providerName" class="providerName" disabled/><br/>
+            Provider ID: <input type="text" name="providerID" class="providerID" disabled/><br/>
+            Status:
+            <select name="status" class="status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select><br/>
+            <!--Prodiver Field List: <input type="text" name="fields" class="fields" size="150"/><br/>-->
+            Prodiver Field List: <br/>
+            <textarea name="fields" class="fields" rows="5" cols="35"></textarea>
+            <br/>
+
+            <h2>Extract Setting</h2>
+            <hr/>
+            Extract Directory: <input type="text" name="extractDirectory" class="extractDirectory"/><br/>
+            File Name Date Format: <input type="text" name="fileNameDateFormat" class="fileNameDateFormat"/><br/>
+            File Name Extension: <input type="text" name="fileNameExtension" class="fileNameExtension"/><br/>
+            Data Has Header: <input type="checkbox" name="dataHasHeader" class="dataHasHeader"/><br/>
+            Data Delimiter: <input type="text" name="dataDelimiter" class="dataDelimiter"/><br/>
+            Data Date Format: <input type="text" name="dataDateFormat" class="dataDateFormat"/><br/>
+            Upload Sample File: <input type="file" id="btnUploadFile"></br>
+            <button type="button" class="btnUploadFile">Parse File</button><br/>
+            <br/>
+
+            <h2>Field Mapping</h2>
+            <hr/>
+            <table id="mappingFields">
+            </table><br/><br/>
+            <button type="button" class="btnSubmit">Submit</button>
+            <!-- <input type="reset" value="reset"> -->
+            </form>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/list.js"></script>
+    <script src="/js/jquery.parse.min.js"></script>
+</body>
+
+
+
+</html>
